@@ -12,6 +12,7 @@ let
       hash = "sha256-13i1r3jx8sxwyd9qznad8m6mlj48wzbm0idk3h25f1i1426vgmlw";
     };
     # TODO: arm64 linux
+    # aarch64-linux = {
 
     # x86_64-darwin = {
     #   url = "https://api.k8slens.dev/binaries/Lens-${version}-latest.dmg";
@@ -32,8 +33,8 @@ let
   meta = with lib; {
     description = "Freelens";
     homepage = "https://github.com/freelensapp/freelens/";
-    license = licenses.lens;
-    maintainers = with maintainers; [ dbirks RossComputerGuy starkca90 ];
+    license = licenses.mit;
+    maintainers = with maintainers; [ ];
     platforms = builtins.attrNames sources;
   };
 
