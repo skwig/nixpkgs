@@ -9,7 +9,7 @@ let
     x86_64-linux = {
       url =
         "https://github.com/freelensapp/freelens/releases/download/v1.2.1/Freelens-${version}-linux-amd64.AppImage";
-      hash = "sha256-13i1r3jx8sxwyd9qznad8m6mlj48wzbm0idk3h25f1i1426vgmlw";
+      hash = "sha256-nNa3jSAhBlcEHLNFUNfniEhaTUVN2Y9T87xr1OXIIY4=";
     };
     # TODO: arm64 linux
     # aarch64-linux = {
