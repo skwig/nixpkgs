@@ -29,36 +29,20 @@ let
   };
 
   src = fetchurl {
-    inherit (sources.${stdenv.system} or (throw "Unsupported system: ${stdenv.system}"))
-      url
-      hash
-      ;
+    inherit (sources.${stdenv.system} or (throw "Unsupported system: ${stdenv.system}")) url hash;
   };
 
   meta = with lib; {
-    description = "Freelens";
+    description = ''
+      Freelens is a free and open-source user interface designed for managing Kubernetes clusters. It provides a standalone application compatible with macOS, Windows, and Linux operating systems, making it accessible to a wide range of users. The application aims to simplify the complexities of Kubernetes management by offering an intuitive and user-friendly interface.'';
     homepage = "https://github.com/freelensapp/freelens/";
     license = licenses.mit;
-    maintainers = with maintainers; [ ];
+    maintainers = with maintainers; [ skwig ];
     platforms = builtins.attrNames sources;
   };
 
 in
 if stdenv.hostPlatform.isDarwin then
-  callPackage ./darwin.nix {
-    inherit
-      pname
-      version
-      src
-      meta
-      ;
-  }
+  callPackage ./darwin.nix {    inherit      pname      version      src      meta      ;  }
 else
-  callPackage ./linux.nix {
-    inherit
-      pname
-      version
-      src
-      meta
-      ;
-  }
+  callPackage ./linux.nix {    inherit      pname      version      src      meta      ;  }
