@@ -1,9 +1,22 @@
-{ pname, version, src, meta, appimageTools, makeWrapper, }:
+{
+  pname,
+  version,
+  src,
+  meta,
+  appimageTools,
+  makeWrapper,
+}:
 let
   appimageContents = appimageTools.extractType2 { inherit pname version src; };
 
-in appimageTools.wrapType2 {
-  inherit pname version src meta;
+in
+appimageTools.wrapType2 {
+  inherit
+    pname
+    version
+    src
+    meta
+    ;
 
   nativeBuildInputs = [ makeWrapper ];
 
