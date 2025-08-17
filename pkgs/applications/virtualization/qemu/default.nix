@@ -280,6 +280,8 @@ stdenv.mkDerivation (finalAttrs: {
       sha256 = "sha256-oC+bRjEHixv1QEFO9XAm4HHOwoiT+NkhknKGPydnZ5E=";
       revert = true;
     })
+
+    ./highfps.patch
   ]
   ++ lib.optional nixosTestRunner ./force-uid0-on-9p.patch;
 
