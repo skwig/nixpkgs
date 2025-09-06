@@ -78,6 +78,7 @@
   libgbm,
   libepoxy,
   libdrm,
+  libglvnd,
   rutabagaSupport ?
     openGLSupport && !minimal && lib.meta.availableOn stdenv.hostPlatform rutabaga_gfx,
   rutabaga_gfx,
@@ -247,6 +248,7 @@ stdenv.mkDerivation (finalAttrs: {
     libgbm
     libepoxy
     libdrm
+    libglvnd
   ]
   ++ lib.optionals rutabagaSupport [ rutabaga_gfx ]
   ++ lib.optionals virglSupport [ virglrenderer ]
@@ -334,7 +336,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional cephSupport "--enable-rbd"
   ++ lib.optional glusterfsSupport "--enable-glusterfs"
   ++ lib.optional openGLSupport "--enable-opengl"
-  ++ lib.optional openGLSupport "--enable-drm"
   ++ lib.optional virglSupport "--enable-virglrenderer"
   ++ lib.optional tpmSupport "--enable-tpm"
   ++ lib.optional libiscsiSupport "--enable-libiscsi"
