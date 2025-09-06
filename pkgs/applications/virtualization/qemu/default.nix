@@ -334,6 +334,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional cephSupport "--enable-rbd"
   ++ lib.optional glusterfsSupport "--enable-glusterfs"
   ++ lib.optional openGLSupport "--enable-opengl"
+  ++ lib.optional openGLSupport "--enable-drm"
   ++ lib.optional virglSupport "--enable-virglrenderer"
   ++ lib.optional tpmSupport "--enable-tpm"
   ++ lib.optional libiscsiSupport "--enable-libiscsi"
