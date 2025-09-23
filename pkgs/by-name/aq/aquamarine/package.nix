@@ -28,8 +28,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "skwig";
     repo = "aquamarine";
-    rev = "d4cf90c3dd6a08f2dcb025652386f6c0153c3b92";
-    hash = "sha256-X7a526kqNXkjDQ4/NfxQF98TBOG6jhYIr2KNuFX0hWg=";
+    rev = "2aeda4439c2711d5b070fe98ff09cd74f552b09b";
+    hash = "sha256-h3vJ4d86YZ3N9uJAK/gWX2WijmbY3/FmoqJ+wcxI3R4=";
   };
 
   nativeBuildInputs = [
