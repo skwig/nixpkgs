@@ -23,13 +23,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "aquamarine";
-  version = "0.9.4";
+  version = "0.9.x";
 
   src = fetchFromGitHub {
-    owner = "hyprwm";
+    owner = "skwig";
     repo = "aquamarine";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-POePremlUY5GyA1zfbtic6XLxDaQcqHN6l+bIxdT5gc=";
+    rev = "d4cf90c3dd6a08f2dcb025652386f6c0153c3b92";
+    hash = "sha256-X7a526kqNXkjDQ4/NfxQF98TBOG6jhYIr2KNuFX0hWg=";
   };
 
   nativeBuildInputs = [
