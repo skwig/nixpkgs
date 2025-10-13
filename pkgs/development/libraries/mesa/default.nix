@@ -205,6 +205,8 @@ stdenv.mkDerivation {
     (lib.mesonEnable "gbm" true)
     (lib.mesonBool "libgbm-external" true)
 
+    (lib.mesonBool "amdgpu-virtio" true)
+
     (lib.mesonBool "teflon" true) # TensorFlow frontend
 
     # Enable all freedreno kernel mode drivers. (For example, virtio can be
