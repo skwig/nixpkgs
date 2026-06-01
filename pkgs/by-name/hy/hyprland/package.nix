@@ -90,7 +90,7 @@ customStdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
     # version: bump to 0.54.2
     rev = "59f9f2688ac508a0584d1462151195a6c4992f99";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+    hash = "sha256-YF31zdrg7ctjD2CR+8rzKNsR0luYgoq8lhRkzd6myL8=";
     # hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
   };
 
