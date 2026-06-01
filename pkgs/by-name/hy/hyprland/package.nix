@@ -82,13 +82,14 @@ let
 in
 customStdenv.mkDerivation (finalAttrs: {
   pname = "hyprland" + optionalString debug "-debug";
-  version = "0.54.3";
+  version = "0.54.2x";
 
   src = fetchFromGitHub {
     owner = "hyprwm";
     repo = "hyprland";
     fetchSubmodules = true;
-    tag = "v${finalAttrs.version}";
+    # layershell: fix popup crash with nullptr mon
+    rev = "02446f507994cda4a4fd6b1c0563dd71e67d64d0";
     hash = "sha256-e+mVjQL3V+xoaH1c3YqAzRq9wwiuEYQTOgZlK0LwfYA=";
   };
 
