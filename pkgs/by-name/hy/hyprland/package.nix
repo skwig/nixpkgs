@@ -90,7 +90,7 @@ customStdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
     # layershell: fix popup crash with nullptr mon
     rev = "02446f507994cda4a4fd6b1c0563dd71e67d64d0";
-    hash = "sha256-e+mVjQL3V+xoaH1c3YqAzRq9wwiuEYQTOgZlK0LwfYA=";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
   };
 
   postPatch = ''
