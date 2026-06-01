@@ -94,7 +94,7 @@ customStdenv.mkDerivation (finalAttrs: {
 
   postPatch = ''
     # Fix hardcoded paths to /usr installation
-    substituteInPlace src/render/types.hpp \
+    substituteInPlace src/render/OpenGL.cpp \
       --replace-fail /usr $out
 
     # Remove extra @PREFIX@ to fix pkg-config paths
@@ -144,7 +144,6 @@ customStdenv.mkDerivation (finalAttrs: {
       aquamarine
       cairo
       glaze
-      glslang
       hyprcursor.dev
       hyprgraphics
       hyprlang
@@ -157,7 +156,6 @@ customStdenv.mkDerivation (finalAttrs: {
       libuuid
       libxcursor
       libxkbcommon
-      lua5_5
       muparser
       pango
       pciutils
