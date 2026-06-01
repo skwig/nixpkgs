@@ -88,9 +88,9 @@ customStdenv.mkDerivation (finalAttrs: {
     owner = "hyprwm";
     repo = "hyprland";
     fetchSubmodules = true;
-    # layershell: fix popup crash with nullptr mon
-    rev = "02446f507994cda4a4fd6b1c0563dd71e67d64d0";
-    hash = "sha256-8eg8XAAuScHIbmiAfSrSCDtHoP/+Dvx7n4kye1Qjec4=";
+    # version: bump to 0.54.2
+    rev = "59f9f2688ac508a0584d1462151195a6c4992f99";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
     # hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
   };
 
