@@ -86,8 +86,7 @@ customStdenv.mkDerivation (finalAttrs: {
     owner = "hyprwm";
     repo = "hyprland";
     fetchSubmodules = true;
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-YF31zdrg7ctjD2CR+8rzKNsR0luYgoq8lhRkzd6myL8=";
+    rev = "59f9f2688ac508a0584d1462151195a6c4992f99";
   };
 
   postPatch = ''
