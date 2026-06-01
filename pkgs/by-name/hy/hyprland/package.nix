@@ -88,7 +88,8 @@ customStdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
     tag = "v0.54.3";
     # rev = "521ece463c4a9d3d128670688a34756805a4328f";
-    hash = "sha256-e+mVjQL3V+xoaH1c3YqAzRq9wwiuEYQTOgZlK0LwfYA=";
+    # hash = "sha256-e+mVjQL3V+xoaH1c3YqAzRq9wwiuEYQTOgZlK0LwfYA=";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
   };
 
   postPatch = ''
