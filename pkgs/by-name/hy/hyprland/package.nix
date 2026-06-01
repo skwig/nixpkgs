@@ -80,7 +80,7 @@ let
 in
 customStdenv.mkDerivation (finalAttrs: {
   pname = "hyprland" + optionalString debug "-debug";
-  version = "0.54.2";
+  version = "0.54.2xd";
 
   src = fetchFromGitHub {
     owner = "hyprwm";
