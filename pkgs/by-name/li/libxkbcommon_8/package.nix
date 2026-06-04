@@ -24,14 +24,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libxkbcommon";
-  version = "1.12.0";
+  version = "1.13.2";
 
   src = fetchFromGitHub {
     owner = "xkbcommon";
     repo = "libxkbcommon";
     tag = "xkbcommon-${finalAttrs.version}";
     # hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-    hash = "sha256-QO3snl7NiyS2ao2MF3eT/lkNmVBjijr3JdTyrPn/2MQ=";
+    hash = "sha256-JdS4+HPHDUUOUq5TUX2F5DicHif8wD3cPvMocWhD4S4=";
   };
 
   patches = [
