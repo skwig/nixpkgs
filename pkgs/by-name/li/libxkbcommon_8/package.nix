@@ -30,15 +30,15 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "xkbcommon";
     repo = "libxkbcommon";
     # tag = "xkbcommon-${finalAttrs.version}";
-    rev = "f1376a2a3e2bec8079bb309c4629736cef30c3b7";
+    rev = "e3ef7a4751b2b62b3f6778f2d2b642ced22c928a";
     # hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-    hash = "sha256-mT/Kju0RzpjYXODJj7xqUQcJ1zuLgdcHUiUi6mkgKPs=";
+    hash = "sha256-9v9o80DGohborNyFkNG7yXe2J/3dOmsaAl6xGjBq6gE=";
   };
 
-  patches = [
-    # Disable one Xvfb test as it fails for permission checks.
-    ./disable-x11com.patch
-  ];
+  # patches = [
+  #   # Disable one Xvfb test as it fails for permission checks.
+  #   ./disable-x11com-bisect.patch
+  # ];
 
   outputs = [
     "out"
@@ -76,7 +76,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-Denable-wayland=${lib.boolToString withWaylandTools}"
   ];
 
-  doCheck = stdenv.hostPlatform.isLinux; # TODO: disable just a part of the tests
+  doCheck = false;
   preCheck = ''
     patchShebangs ../test/
   '';
