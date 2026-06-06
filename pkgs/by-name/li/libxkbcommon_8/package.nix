@@ -30,9 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "xkbcommon";
     repo = "libxkbcommon";
     # tag = "xkbcommon-${finalAttrs.version}";
-    rev = "6e45c83c115f9daae7bff2c42e3770857543a7ff";
+    rev = "584e0690c26a02fc3b2251968bd8f2a295658bfc";
     # hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-    hash = "sha256-SqF9tKd7cT+tUhVjs3Wyo75/hOqvJlGHGLGQtAKF6Ic=";
+    hash = "sha256-ZRzGIMgiPG3XB98m9rQDKsW3a9bQq6pGmUt53aOJQns=";
   };
 
   # patches = [
