@@ -1,0 +1,21 @@
+Index: src/devices/IKeyboard.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/devices/IKeyboard.cpp b/src/devices/IKeyboard.cpp
+--- a/src/devices/IKeyboard.cpp	(revision fcbbd6d4d80033c40e3b702518e1a2ba3f479452)
++++ b/src/devices/IKeyboard.cpp	(revision 82cf3b254ad79e73376ba412253d56613e322b58)
+@@ -156,10 +156,10 @@
+     if (m_xkbKeymapV1FD.isValid())
+         m_xkbKeymapV1FD.reset();
+ 
+-    auto cKeymapStr   = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V2);
++    auto cKeymapStr   = xkb_keymap_get_as_string2(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V2, XKB_KEYMAP_SERIALIZE_KEEP_UNUSED);
+     m_xkbKeymapString = cKeymapStr;
+     free(cKeymapStr); // NOLINT(cppcoreguidelines-no-malloc,-warnings-as-errors)
+-    auto cKeymapV1Str   = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1);
++    auto cKeymapV1Str   = xkb_keymap_get_as_string2(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1, XKB_KEYMAP_SERIALIZE_KEEP_UNUSED);
+     m_xkbKeymapV1String = cKeymapV1Str;
+     free(cKeymapV1Str); // NOLINT(cppcoreguidelines-no-malloc,-warnings-as-errors)
+ 

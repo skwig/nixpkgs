@@ -93,6 +93,10 @@ customStdenv.mkDerivation (finalAttrs: {
     hash = "sha256-RuXKYFqd+yr9ppkbRzq07Jt0IgiNa8nCpyfoBElpSDY=";
   };
 
+  patches = [
+    ./xkb-keymap2.patch
+  ];
+
   postPatch = ''
     # Fix hardcoded paths to /usr installation
     substituteInPlace src/render/types.hpp \
